@@ -1,0 +1,109 @@
+---
+import Square from "../components/Square";
+import {BorderBeam} from "../components/BorderBeam"
+---
+
+<html
+	lang="en"
+	style={{
+		scrollBehavior: "smooth",
+		scrollbarWidth: "none",
+	}}
+>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>StardBots Landing</title>
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<style>
+			html,
+			body {
+				font-family: system-ui;
+				margin: 0;
+			}
+			body {
+				padding: 2rem;
+			}
+		</style>
+	</head>
+	<body
+		class="bg-black text-white max-w-[1000px] mx-auto"
+		style={{
+			background: "rgb(11 10 16)",
+		}}
+	>
+		<Square
+			column={7}
+			row={7}
+			transparentEffectDirection="bottomToTop"
+			blockColor="#ffffff0d"
+		/>
+		<div class="flex flex-col gap-60">
+			<div class="flex flex-col md:flex-row gap-10 items-center">
+				<div class="flex flex-col max-w-[100%] md:max-w-[40%] gap-5">
+					<div>
+						<h1
+							class="font-bold text-2xl md:text-4xl text-center md:text-start"
+						>
+							StardBots MultiServices
+						</h1>
+						<p
+							class="text-white/70 text-md md:text-lg text-center md:text-start"
+						>
+							StardBots is a multi-service discord website
+						</p>
+					</div>
+					<a
+						href="https://dc.stardbots.net"
+						class="bg-white text-black mx-auto md:mx-0 transitions-colors max-w-[150px] p-2 md:p-3 rounded-lg flex justify-center items-center hover:bg-white/80"
+						>Join Discord</a
+					>
+				</div>
+				<div class="flex relative flex-col max-w-[100%] md:max-w-[60%] gap-5">
+					<img
+						src="/screenshot.png"
+						height="500"
+						width="1000"
+						class="rounded-md border border-white/40"
+					/>
+					<BorderBeam />
+				</div>
+			</div>
+			<div class="flex flex-col gap-5">
+				<h2 class="flex w-full justify-center font-medium">
+					Other Services
+				</h2>
+				<div class="flex flex-col gap-36">
+					<div
+						class="flex flex-col md:flex-row gap-10 items-center max-w-[100%] md:max-w-[700px] mx-auto"
+					>
+						<div
+							class="flex flex-col max-w-[100%] md:max-w-[40%] gap-5"
+						>
+							<div>
+								<h1 class="font-bold text-xl">
+									Discord Servers
+								</h1>
+								<p class="text-white/70 text-sm">
+									StardBots Servers, a list of servers within
+									the web
+								</p>
+							</div>
+						</div>
+						<div
+							class="flex flex-col max-w-[100%] md:max-w-[60%] gap-5"
+						>
+							<img
+								src="/screenshot.png"
+								height="500"
+								width="1000"
+								class="rounded-md border border-white/40"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
